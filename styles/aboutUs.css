@@ -1,0 +1,20 @@
+body {
+    background-color: aquamarine;
+}
+
+.header-text {
+    color: red;
+}
+
+#my-div {
+    width: 500px;
+    height: 100px;
+    background-color: antiquewhite;
+    /* border-radius:30px; */
+    display: flex;
+    border-width:3px;
+    border-color: black;
+    border-style:groove;
+
+}
+
