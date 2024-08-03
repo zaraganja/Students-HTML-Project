@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive page</title>
+    <style>
+        .images{
+            object-fit: scale-down;
+            transform: scale(-3);
+        }
+    </style>
+</head>
+<body>
+    <h1>عکس </h1>
+    <picture>
+        <source class="images" media="(min-width: 650px)" srcset="/src/images/banner.jpg" >
+        <source class="images" media="(min-width: 465px)" srcset="/src/images/pro1.jpg" >
+        <img alt="" width="100%" height="200">        
+    </picture>
+    <p>صفحه براوزر را تغییر دهید تا تغییرات را مشاهده کنید</p>
+</body>
+</html>

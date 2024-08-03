@@ -1,4 +1,59 @@
 body{
-    /* 1- github  */
-    /* colors */
+  align-items: center;
+}
+table{
+    width: 100%;
+}
+.col1{
+    background-color: aqua;
+}
+.col2 {
+    background-color: bisque;
+}
+
+
+
+.style1{
+    
+}
+
+#style2{
+   color: red; 
+}
+.div-bottom{
+    display: flex;
+    width: 50%;
+    height:auto;
+    padding-top: 40%;
+    background-image: url('/src/images/pro1.jpg');
+    background-repeat: no-repeat;
+    /* ********* */
+    justify-content: center;
+}
+
+/* a:link {
+    color: greenyellow;
+    background-color:transparent;
+    text-decoration: none;
+
+}
+a:visited {
+    color: palevioletred;
+    background-color: transparent;
+}
+a:hover {
+    color:yellow;
+
+}
+a:active{
+    color:teal;
+} */
+
+a:link , a:visited {
+    color: aquamarine;
+}
+
+
+h1 , h3 {
+    color: red;
 }
