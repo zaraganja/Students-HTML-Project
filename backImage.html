@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back Image</title>
+    <style>
+        .div1{
+            width: 1000px;
+            height: 500px;
+            display: flex;
+            flex-direction:row ;
+            justify-content:space-between;
+            align-items: center;
+            background-color: #EF5A6F;
+        }
+        .containers{
+            background-color: aqua;
+            width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .backImage{
+            background-image: url("src/images/pro2.jpg");
+            width: 400px;
+            height: 400px;
+            background-size:cover;
+            background-position:center center;
+
+        }
+        .imageContainer{
+            width: 200px;
+            height: 400px;
+            overflow :hidden;
+        }
+        .image{
+            width: 100%;
+            height: 100%;
+            object-fit:scale-down;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" >
+        <div class="containers">
+            <h1>Background Image</h1>
+            <div class="backImage">
+               
+            </div>
+        </div>
+        <div class="containers">
+            <h1>Image inside div</h1>
+            <div class="imageContainer">
+                <img src="src/images/pro2.jpg" alt="product2" class="image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

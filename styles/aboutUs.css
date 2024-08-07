@@ -17,4 +17,17 @@ body {
     border-style:groove;
 
 }
+/* 20.4 px = 1.275 rem */
+.header{
+    width: 1300px;
+    height: 400px;
+    background-color: rgba(0,0,0,0.6);
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% calc(100% - 5rem),
+        0% 100%
+
+    );
+}
 

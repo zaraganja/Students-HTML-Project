@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive Lay</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        header{
+            background-color: red;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: aliceblue;
+        }
+
+        section{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            align-items: center;
+            align-content: center;
+        } 
+        div{
+            width: 40%;
+            height: 100%;
+            background-color: aquamarine;
+            margin: 1%;
+
+        }
+        footer{
+            background-color: #777;
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width :600px){
+            section{
+                flex-direction: column;
+            }
+            div{
+                width: 100%;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>my page</h2>   
+    <h3>به وبسایت من خوش آمدید</h3>
+
+    <header>
+        <h2>هدر صفحه</h2>
+    </header>
+
+    <section>
+        <div> 
+            <h1>div1</h1>
+        </div>
+        <div>
+            <h1>div2</h1>
+        </div>
+        <div>
+            <h1>div3</h1>
+        </div>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>
