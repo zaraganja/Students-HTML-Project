@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fill mode animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 20px;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes move {
+            0%{
+                transform: translateX(0);
+                background-color: rgb(31, 185, 232);
+            }
+            25%{
+                transform: translateX(200px);
+                background-color: rgb(71,255,141);
+            }
+            100%{
+                transform: translateX(500px);
+                background-color: tomato;
+            }
+        }
+        .forwards{
+            animation-name: move;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+        }
+       
+     /* قبل از شروع انیمیشن استایل های خارج از کیفریم 
+     اعمال میشود و بعد از اتمام انیمیشن حالت نهایی کیفریم را به خودش میگیرد */
+
+        .backward{
+            animation-name: move;
+            animation-fill-mode: backwards;
+            animation-delay: 3s;
+        }
+        /* قبل از شروع انیمیشن استایل اولیه در کیفریم رو بگیر و بعد در آخر 
+        بعد از اتمامانیمیشن استایل خارج از کیفریم رو بگیر */
+
+
+        .both{
+            animation-name: move;
+            animation-fill-mode: both;
+            animation-delay: 3s;
+        }
+        /* قبل از شروع انیمیشن مثل بکوارد عمل کن و بعد از اتمام انیمیشن مانند فووروارد عمل */
+
+
+    </style>
+</head>
+<body>
+    <div class="box forwards">Forwards</div>
+    <div class="box backward">backward</div>
+    <div class="box both">both</div>
+</body>
+</html>

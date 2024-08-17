@@ -6,7 +6,7 @@
     <title>form</title>
 </head>
 <body>
-    <form action="/my-form.php">
+    <!-- <form action="/my-form.php">
         <label for="fname">first name</label><br>
         <input type="text" id="fname" name="fname" placeholder="نام" required autocomplete="on"><br>
         <label for="lname">last name</label><br>
@@ -17,11 +17,58 @@
         <input type="color"><br>
         <input type="date"><br>
         <input type="datetime-local"><br>
-        <input type="email" readonly value="someone@gmail.com"  ><br><br>
+        <input type="email" readonly placeholder="email"  ><br><br>
+        <input type="file" placeholder="upload your file" multiple ><br>
+        <input type="month"><br>
+        <input type="number" min="1" max="10" step="3" ><br>
+        <input type="range" >
+        <input type="search"><br>
+        <input type="tel"><br>
+        <input type="week">
+        <hr>
 
+        <input type="submit" value="Submit"><br>
 
+        <form action="">
+            <input list="browsers" >
+            <datalist id="browsers">
+                <option value="firefox">
+                <option value="Safari">
+                <option value="chrome">
+            </datalist>
+        </form>
+<hr>
+        <form action="">
+            <input type="radio" id="html" name="lang" value="html">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="lang" value="css">
+            <label for="css">CSS</label>
+        </form>
+        <hr>
+        <form action="">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="1">
+            <label for="vehicle1">بله</label>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="0">
+            <label for="vehicle2">خیر</label>
+        </form>
+    </form> -->
+<hr>
+    <form onsubmit="alertValue();return false" >
+        <label for="fname">first name</label><br>
+        <input type="text" id="fname" placeholder="نام" required ><br>
+        <label for="lname">last name</label><br>
+        <input type="text" id="lname" placeholder="نام خانوادگی"><br><br>
         <input type="submit" value="Submit">
-
     </form>
+    <script>
+        const alertValue=()=>{
+            const finame=document.getElementById("fname").value;
+            const lastname=document.getElementById("lname").value;
+            console.log(finame)
+            console.log(lastname)
+            console.log("first name:"+finame)
+            console.log("last name:"+lastname)
+        }
+    </script>
 </body>
 </html>
