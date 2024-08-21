@@ -1,8 +1,3 @@
- src/videos/vR.mp4
+src/videos/vR.mp4
 #ignore this path from pushing to github
-
- scr/sound/sefo_bonito.mp3
-
-# *.mp3
-# *.mp4
-
+*.mp3
