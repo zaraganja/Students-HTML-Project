@@ -1,46 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>graphics</title>
     <style>
-        body{
-          
-        }
-        canvas{
-            margin-top: 10%;
-            margin-left: 10%;
-        }
+      body {
+      }
+      canvas {
+        margin-top: 10%;
+        margin-left: 10%;
+      }
     </style>
-</head>
-<body>
-    <canvas id="canvasLine" width="100" height="100" style="border: 1px dotted #000;"></canvas>
+ 
+  </head>
+  <body>
+    <canvas
+      id="canvasLine"
+      width="100"
+      height="100"
+      style="border: 1px dotted #000"
+    ></canvas>
     <script>
-        var c=document.getElementById("canvasLine");
-        var ctx= c.getContext("2d");
-        ctx.moveTo(0,0);
-        ctx.lineTo(50,100);
-        ctx.stroke();
+      var c = document.getElementById("canvasLine");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(50, 100);
+      ctx.stroke();
     </script>
-    <canvas id="canvasCircle" width="200" height="200" style="border: 2px dashed #000;"></canvas>
+    <canvas
+      id="canvasCircle"
+      width="200"
+      height="200"
+      style="border: 2px dashed #000"
+    ></canvas>
     <script>
-        var c=document.getElementById("canvasCircle");
-        var ctx=c.getContext("2d");
-        ctx.arc(150,55,50,0,2*Math.PI);
-        // arc(x,y,radius,startAngle,endAngle)
-        ctx.stroke()
+      var c = document.getElementById("canvasCircle");
+      var ctx = c.getContext("2d");
+      ctx.arc(150, 55, 50, 0, 2 * Math.PI);
+      // arc(x,y,radius,startAngle,endAngle)
+      ctx.stroke();
     </script>
-    <img src="src/images/radian.jpg" alt="radian"><br>
-    <canvas id="textCanvas" width="200" height="100" style="border: 2px solid red;"></canvas>
+    <img src="src/images/radian.jpg" alt="radian" /><br />
+    <canvas
+      id="textCanvas"
+      width="200"
+      height="100"
+      style="border: 2px solid red"
+    ></canvas>
     <script>
-        var c=document.getElementById("textCanvas");
-        var ctx=c.getContext("2d");
-        ctx.font="30px Arial";
-        //  ctx.fillStyle="red"
-        // ctx.fillText("Hi class",10,50);
-        ctx.strokeStyle="red"
-        ctx.strokeText("hi",10,50);
+      var c = document.getElementById("textCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      //  ctx.fillStyle="red"
+      // ctx.fillText("Hi class",10,50);
+      ctx.strokeStyle = "red";
+      ctx.strokeText("hi", 10, 50);
     </script>
-</body>
+
+    <div
+      style="
+        display: flex;
+        height: 500px;
+        width: 800px;
+        background-color: aqua;
+        flex-direction: row;
+        justify-content: space-between;
+      "
+    >
+      <div
+        style="height: 100%; width: 50%; display: flex; flex-direction: column"
+      >
+      <h1>LinearGradient</h1>
+      <canvas id="linearGradient" width="200" height="100" style="border: 2px dotted #10d2b8;background-color: palevioletred;" >
+      </canvas>
+        <script>
+            var c = document.getElementById("linearGradient");
+            var ctx=c.getContext("2d");
+            var grd= ctx.createLinearGradient(0,100,200,100);
+            // createLinearGradient(x0,y0,x1,y1);
+            grd.addColorStop(0,"green");
+            grd.addColorStop(1,"pink");
+            ctx.fillStyle=grd;
+            ctx.fillRect(0,0,200,100)
+            // fillRect(x,y,width,height)
+        </script>
+    </div>
+    <div style="height: 100%;width: 50%;display: flex;flex-direction: column;background-color: cadetblue;">
+        <h1>Circular gradient</h1>
+        <canvas id="Cgradient" width="200" height="100" style="border: 2px solid #c8f014;"></canvas>
+        <script>
+            var c=document.getElementById("Cgradient");
+            var ctx=c.getContext("2d");
+            var grd=ctx.createRadialGradient(70,70,20,70,60,90);
+            // createRadialGradient(x0,y0,r0,x1,y1,r1)
+            // x0,y0,r0 مختصات مرکز و شعاع دایره اول
+            // x1,y1,r1 مختصات مرکز و شعاع دایره دوم 
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"yellow");
+
+            ctx.fillStyle=grd;
+            ctx.fillRect(0,0,200,100);
+        </script>
+    </div>
+    </div>
+  </body>
 </html>
