@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blockout</title>
+    <style>
+        blockquote{
+            cursor:pointer;
+        }
+        blockquote::before{
+            content: attr(cite);
+             display: none;
+            background-color: rgba(0,0,0,0.4);
+            width: fit-content;
+            padding-inline: 10px;
+            padding-block: 5px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            top: 10px;
+            left: 180px; 
+            
+        }
+        blockquote:hover::before{
+             display: block; 
+        }
+    </style>
+</head>
+<body>
+        <blockquote cite="https://melorinet.ir">this is the website</blockquote> 
+</body>
+</html>
