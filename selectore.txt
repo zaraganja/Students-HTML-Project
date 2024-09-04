@@ -1,0 +1,27 @@
+1.simple selectores
+2. combinator selectores المنتها را بر اساس ارتباط بین آنها انتخاب میکند
+  2-1 element emelent   -div p  همه پی هایی که داخل دیو 
+  2-2 element>element  - div>p همه پی هایی که اولین پرنتشون دیو هست
+  2-3 element+element - div+p  اولین پی ای که بعد از تمام شدنه دیو قرار داره رو انتخاب کن
+  باید بلافاصله بعد از تمام شدن دیو بیاید
+  2-4 elemnet ~element - p~ul  هر یوال که بعد از اتمام پی قرار داره رو انتخاب میکنه هر چند تا هم باشه و
+  وسطها المنتی اگر باشه مهم نیست 
+
+3.Pseudo-class selectores المنت ها را بر اساس حالت خاصی از آنها انتخاب میکنه
+   3-1 a:visited , a:link , a: hover , a:active 
+   3-2 tag.classname:hover - a.class1:hover لینکی که اسم کلاسش کلاس۱ هست وقتی که روش هاور میشه رو استایلو اعمال کن
+   3-3 tag:hover tag  - div:hover p   هر پی ای که پرنتش دیو باشه و روی دیو هاور بشه
+   3-4 tag:first-child - p:first-child  اون پی ای که اولین چایلد همه المنتها هست
+   3-5 tag tag:first-child - p i:first-child  اون آی ای که اولین چایلد المنت عه پی هست
+   3-6 tag:first-child tag - p:first-child i  آی ای که پرنت اش اولین چایلد هر المنتی هست 
+   3-7 tag:lang() q:lang(no)  قوانین خاصی برای لنگ های مختلف میتوان تعریف کرد
+   3-8 :checked - input:checked در چک باکس های اینپوت استفاده میشه
+   3-9 :disabled - input:disabled 
+   3-10 :enabled - input :enabled
+   3-11 input[type="text"]
+   3-12 input[type="text"]:enabled و یا input[type="text"]:disabled
+   3-13 :empty - p:empty هر پی ای که هیچ چایلدی نداره داخلش خالیه
+   3-14 :first-of-type - p:first-of-type هر پی ای که اولین المنت پی عه پرنتش هست =اولین چایلد باشی که از نوع پی هستی قبل از هر تگی 
+   غیر از پی باشه مهم نیست -اولین پی ای باشی که داخل تگ پرنت ات دیده میشی 
+   3-15 :focus - input:focus - فوکوس یعنی اینکه د اخل فیلد کلیک کنی
+   
