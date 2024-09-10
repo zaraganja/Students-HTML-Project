@@ -24,4 +24,48 @@
    3-14 :first-of-type - p:first-of-type هر پی ای که اولین المنت پی عه پرنتش هست =اولین چایلد باشی که از نوع پی هستی قبل از هر تگی 
    غیر از پی باشه مهم نیست -اولین پی ای باشی که داخل تگ پرنت ات دیده میشی 
    3-15 :focus - input:focus - فوکوس یعنی اینکه د اخل فیلد کلیک کنی
-   
+   3-16 :in-range -  input:in-range یعنی مقدار اینپوت داخل اون محدوده باشه رو انتخاب میکنه 
+   3-17 :out-of-range - input:out-of-range اگر فیلد خارج از محدوده باشه رو انتخاب میکنه و بهش هر استایلی بدید میگیره
+   3-18 :invalid - input:invalid در فیلدهای ایمیل و امثال آن استفاده میشه مثلا اگر در فیلد ایمیل 
+   مقداری به جز ایمیل وارد کنید اونو انتخاب میکنه و هر استایلی بدید میگیره
+   3-19 :valid - input:valid برعکس بالاییه 
+   3-20 :optional - input:optional  فیلد هایی که required نیستن
+   رو انتخاب میکنه
+   3-21 :read-only - input:read-only فیلدهایی که readonly attribute دارن 
+   رو انتخاب میکنه
+   3-22 :read-write - input:read-write  برعکس مورد قبل 
+   3-23 :required - input:required  برعکس مورد 3-20 
+   یعنی فیلدهایی رو انتخاب میکنه که required attribute دارن 
+   3-24 :last-child - p:last-child 
+     اون المنت پی ای که آخرین فرزند پرنتش هست  
+  3-25 :last-of-type - p:last-of-type اون المنتهای پی ای که آخرین المنت پی عه پرنت شون هست
+  ***** 3-26 :not(selector) -  :not(p) هر المنتی که پی نیست رو انتخاب کن بهش استایل رو اعمال کن
+  3-27 :nth-child(n) - p:nth-child(2) \  دومین فرزند باید باشه و باید پی باشد 
+  چون دو نوشتیم میشه دومین فرزند از پی هارو انتخاب میکنه
+  3-28 :nth-last-child(n) - p:nth-last-child(2)  دومین فرزند باشه از آخر و پی باشه
+  3-29 :nth-last-of-type(n) - p:nth-last-of-type(2) شرطش اینه که از آخر دومین پی باشه 
+  3-30 :nth-of-type(n) - p:nth-of-type(2)  پی ای که از بالا دومین پی باشه
+  3-31 :only-of-type- p:only-of-type هر المنتی که پی باشه و تنها پی عه پرنتش باشه
+  3-32 :only-child - li:only-child المنتی که تنها فرزند پرنتش یا همون والدش باشه رو انتخاب میکنه
+  3-33 :root 
+   /* html{
+                background-color: red;
+              } */
+              styles of browsers
+                /* :root{
+                background-color: pink;
+              } */
+               /* body {
+                background-color: green;
+                height: 400vh;
+                width: 100vw;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+              }  */
+              /* html{
+                background-color: red;
+              } */
+
+  
+  3-34 :target  #news:target ******

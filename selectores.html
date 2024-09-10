@@ -92,35 +92,127 @@
                 height: 40px;
                 width: 40px;
               } */
-              p:first-of-type{
+              /* p:first-of-type{
                 background-color: aqua;
-              }
-              input:focus{
+              } */
+              /* input:focus{
                 background-color: coral;
                 
+              } */
+              /* input:in-range{
+                background-color: rgba(255, 0, 0,0.2);
+              } */
+              /* input:out-of-range{
+                background-color: rgb(209, 16, 16);
+              } */
+              /* input:invalid{
+                border-color: red;
+                background-color: red;
+              } */
+              /* input:valid{
+                background-color: blue;
+              } */
+              /* input:optional{
+                border: 3px dashed red;
+              } */
+              /* input:read-only{
+                color: gray;
+                background-color: gainsboro;
               }
+              input:read-write{
+                background-color: bisque;
+              }
+            input:required{
+              background-color: aquamarine;
+            }
+            p:last-child{
+              background-color: yellow;
+            } */
+             /* p:last-of-type{
+              font-size: 30px;
+              color: red;
+             }
+             p:last-child{
+              background-color: yellow;
+             }
+              */
+              /* :not(p){
+                color: green;
+                font-size: large;
+                text-decoration: line-through;
+              } */
+              /* p:nth-child(2){
+                color: green;
+              } */
+
+              /* p:nth-last-child(2){
+                background-color: rgb(34, 115, 115);
+              } */
+              /* p:nth-last-of-type(2){
+                background-color: greenyellow;
+                color: rebeccapurple;
+                font-size: 40px;
+              } */
+               /* p:nth-of-type(2){
+                color: red;
+                font-size: 40px;
+                text-decoration: underline;
+               } */
+                 /* p:only-of-type{
+                  background-color: red;
+                }  */
+                  /* li:nth-child(1){
+                    background-color: red;
+                  } */
+              /* p:only-child{
+                background-color: yellow;
+              }
+              li:only-child{
+                background-color: greenyellow;
+              } */
+              /* :root{
+                background-color: pink;
+              } */
+               /* body {
+                background-color: green;
+                height: 400vh;
+                width: 100vw;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+              }  */
+              /* html{
+                background-color: red;
+              } */
+               
+
     </style>
 </head>
 <body>
-    <p>some text <q lang="no">a note</q> some text</p>
-    <p></p>
+    <!-- <p>some text <q lang="no">a note</q> some text</p> -->
+    <!-- <input type="text" value="test text"> -->
+    <p>THİS İS THE SECOND P OF BODY</p>
+    <!-- این پی از آخر اولین پی برای بادی هست  -->
     <section>
         <p>after ending div
             <i >jhfıjehıfjhe</i>
             <i> bıuhoh</i>
         </p>
         <div >
+          <div>
+            <p>P1</p>
+          </div>
             <i>I am the first child of p </i>
             <h1 class="class1"> HEADER1 selectores</h1>
             <p class="class1">my paragraph</p>
             <p class="class1">my paragraphJHGKIGHKHKHKUHKUHIUH</p>
+            <h4>this is after last p</h4>
         </div>
        
         <ul>
             <li>one</li>
-            <li>two</li>
         </ul>
-        <p>secondddd</p>
+        
         <h1>hEADER2 heading</h1>
         <ul>
             <li>second one</li>
@@ -142,8 +234,11 @@
         <input type="checkbox" value="V1">Value1:<br>
         <input type="checkbox" value="V2">Value2: <br>
         
-        <input type="password" >disabled <br>
-        <input type="text" > enabled <br>
+        <input  type="password" required>disabled <br>
+        <input  type="text" required > enabled <br>
+        <input type="number" min="1" max="10" ><br>
+        <label for="email" >email</label>
+        <input type="email" name="email" id="email" readonly value="someone@gmail.com" >
     </form>
 </body>
 </html>
