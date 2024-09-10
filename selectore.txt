@@ -48,6 +48,7 @@
   3-31 :only-of-type- p:only-of-type هر المنتی که پی باشه و تنها پی عه پرنتش باشه
   3-32 :only-child - li:only-child المنتی که تنها فرزند پرنتش یا همون والدش باشه رو انتخاب میکنه
   3-33 :root 
+  فرق روت بادی و اچ تی ام
    /* html{
                 background-color: red;
               } */
