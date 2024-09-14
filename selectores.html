@@ -184,14 +184,81 @@
               /* html{
                 background-color: red;
               } */
-               
+/* 
+             :not(p){
+              color: red;
+             }
+             p,p * {
+              color:initial;
+             } */
+/* 
+             #news1:target{
+              border: 2px solid #000;
+              background-color: rgba(175, 213, 244, 0.616);
+             }
 
+            p::after{
+              content: ".";
+            }
+            p::before{
+              content:"hiiii" ;
+            } */
+            /* p::first-letter{
+              color: red;
+              font-size: larger;
+
+            }
+            p::first-line{
+              background-color: aqua;
+            }
+
+            ::marker{
+              color: violet;
+            }
+            p::selection{
+              background-color: red;
+              color: beige;
+            } */
+            /* a[target]{
+              background-color: aqua;
+            } */
+               /* a[target="_parent"]{
+                background-color: aquamarine;
+               } */
+            /* img[alt~="my"]{
+              border: 2px solid #000;
+            } */
+             /* [class*="te"]{
+              background-color: rgb(195, 0, 255);
+              display: none;
+             } */
+        input[type="text"]{
+          border: 2px solid orange;
+        }
+        input[type="password"]{
+          border: 2px dashed gray;
+        }
     </style>
 </head>
 <body>
+  <h1 class="test">هدر اول </h1>
+  <h1 class="first-test">هدر دوم</h1>
+  <h2 class="toptest" >هدر سوم</h2>
+  <h1 class="second">هدر چهارم</h1>
+
+<img src="src/images/pro1.jpg" alt="my flower" height="113" width="150" ><br><br>
+<img src="src/images/pro2.jpg" alt="flower" height="113" width="150" >
+  <h1>my Heading</h1>
+  <a href="graphics.html" target="_blank">Jump to news1</a><br>
+  <a href="mapImage.html" target="_parent">Jump to new2</a><br>
+
+  <p ><b>محتوای اول</b></p>
+  <p id="news2" ><b>محتوای دوم</b></p>
+
+
     <!-- <p>some text <q lang="no">a note</q> some text</p> -->
     <!-- <input type="text" value="test text"> -->
-    <p>THİS İS THE SECOND P OF BODY</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum asperiores minus voluptas maiores maxime accusantium assumenda consectetur vitae nam accusamus voluptatem exercitationem rerum veniam, repudiandae officia labore perferendis error nesciunt.</p>
     <!-- این پی از آخر اولین پی برای بادی هست  -->
     <section>
         <p>after ending div
@@ -230,7 +297,7 @@
 
     <a href="media.html" target="_blank">برو به صفحه مدیا</a>
 
-    <form action="">
+    <form id="news1" action="">
         <input type="checkbox" value="V1">Value1:<br>
         <input type="checkbox" value="V2">Value2: <br>
         
@@ -239,6 +306,7 @@
         <input type="number" min="1" max="10" ><br>
         <label for="email" >email</label>
         <input type="email" name="email" id="email" readonly value="someone@gmail.com" >
-    </form>
+    </form><br><br>
+
 </body>
 </html>

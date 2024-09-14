@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- conteteditable یک اتریبیوت هست -->
+     <script>
+        const sendCommentToserver=()=>{
+            const cmt= document.getElementById("comment").innerText;
+            alert(cmt);
+        }
+     </script>
+<style>
+    p{
+        border: 3px solid orange;
+        padding: 5%;
+    }
+</style>
+</head>
+<body>
+
+    <p contenteditable="true" id="comment" >این متن قابل تغییر هست</p>
+    <button onclick="sendCommentToserver()" >ذخیره کن</button>
+    <!-- در کامنتها استفاده میشه فیلد کامنت -->
+</body>
+</html>
