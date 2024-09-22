@@ -4,3 +4,69 @@ src/videos/vR.mp4
 
 # Track 
 
+# فرض کنید پروژه ای را از یک ریپازیتوری کلون کردید 
+# و میخواهید در گیتهاب خودتون پوش کنید 
+
+# ۲ روش
+# rm -fr .git*
+
+
+# روش دوم
+# فایل .git رو حذف کنید
+
+
+#  بعد از این میتونید ریپازیتوری جدید بسازید و این پروژه رو داخلش پوش کنید 
+
+
+
+# اگر فایل های داخل گیتیگنور باز به گیت میرن یعنی فایلها قبلا توسط گیتهاب ردیابی ترک شده اند س
+
+# باید از مسیری که میدید مطمین باشید
+
+# برای آنترک کردن مسیرها باید از کامند های زیر داستفاده کنید
+# git rm -r --cached .    
+# =>This command removes all 
+#files from the Git index (the cache), but leaves them on your filesystem. 
+#This means Git will stop tracking these files.
+
+# git add .    
+#=>This adds all files back to the index, but because of your
+# .gitignore, only the files not listed in .gitignore will be added back.
+
+# git commit -m "Update .gitignore to stop tracking ignored files" 
+#=>This commits the change, effectively
+# removing the ignored files from the repository's tracking.
+
+#git push -u origin main
+
+# اگر بعد از گیت پوش میبینید که خیلی طول میکشه قبل از گیت پوش این کامند رو بزنید
+# git config http.postBuffer 524288000
+
+
+
+# اگر پروژه ای را کلون کرده اید و بعد تغییر داده اید و بعد بخواهید ان را پول کنید با ارور زیر مواجه میشوید
+# که در فایلی که تغییر داده اید آن را برای شما می آورد در ارور
+# how to solve this problem
+# Updating 1d64bb7..875df6f
+# error: Your local changes to the following files would be overwritten by merge:
+#         styles/index.css
+# Please commit your changes or stash them before you merge.
+# Aborting
+#  برای حل این مشکل سه راه حل داریم >
+#  ۱.
+#  Add the changes:
+#  git add styles/index.css
+# git commit -m "Your message describing the changes"
+# git merge origin/branch-name
+
+
+# ۲.stash your changes تغییرات را مخفی کن
+# If the changes in styles/index.css are not ready to be committed, you can stash them temporarily.
+# git stash push -m "Stash message describing your changes"
+# git merge origin/branch-name
+# git stash pop
+
+# ۳.Discard Your Changes
+# If the changes in styles/index.css are not important, you can discard them.
+# git checkout -- styles/index.css
+# git merge origin/branch-name
