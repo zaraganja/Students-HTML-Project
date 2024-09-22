@@ -1,0 +1,17 @@
+1-Landing page :
+https://www.figma.com/design/js6xbpadsG1T8F4mu2tQux/Travello--Traveling-Website-Landing-Page-(Community)?node-id=302-950&t=1klBnVJgHl8w1aVS-0
+
+2-sign in-sign up -دکمه ها گرادینت باشن =پایین پسورد یک منو به خاط بسپار باشه و با کدهای جاوااسکریپت مقدارهارو برگردونه وقتی کلیک میکنی رو دکمه و ریکوایرد باشن همه اینپوت ها
+https://www.figma.com/design/PUjQsuWSJvVhvxgH35lgV6/Sign-in-and-Sign-Up-Page-design-(Community)?node-id=0-1&t=8FVIMSLZvr2I4jzA-0
+
+
+لاگین و ساینآپ از داخل لندینگپیج لینک داشته باشن ینی این دوتا یه پروژه باشن
+
+نام پروژه 
+Task1-اسمتون به انگلیسی
+
+در گیتهاب از اول بزارید و لینکشو شنبه برام بفرستید و هی پوش کنید تا جمعه آپدیت بشه تموم کنید 
+
+به باکس هایی که شدوو دارن سایه دارن سایه بدید
+
+make your project repository "Private"
