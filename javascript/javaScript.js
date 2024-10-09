@@ -340,7 +340,7 @@ const fillMyListViaMap=()=>{
 
 
 const example4=()=>{
-    // new Set()*********************** add-has-
+    // new Set()*********************** add-has-delete-clear
     const mySet=new Set();
     mySet.add(1);
     mySet.add(5);
@@ -348,19 +348,145 @@ const example4=()=>{
     mySet.add("ganji");
 
     console.log(mySet);
-    mySet.add({id:22222});
-    console.log(mySet);
-    console.log(mySet.has(5));//true
-    mySet.delete(5);
-    console.log(mySet.has(5))//false
+     mySet.add({id:22222});
+     console.log(mySet);
+     console.log(mySet.has(5));//true
+     mySet.delete(5);
+     console.log(mySet.has(5))//false
 
 }
+
+// اینو بعدا لازم داریم 
+// const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 // پر کردن فرم با ست 
 const fillMyListViaSet=()=>{
+    const mySet=new Set();
+    mySet.add(1);
+    mySet.add(5);
+    mySet.add("zara");
+    mySet.add("ganji");
+
+    const formList= document.getElementById("colors");
+    for (let item of mySet){
+        const option= document.createElement('option');
+        option.value=item;
+        formList.appendChild(option);        
+    }
+
+    mySet.clear();
+    console.log(mySet.size);
+
+}
+
+const testRepetedValues=()=>{
+    // میخواهم مقادیر تکراری را حذف کنم 
+    const numbers= [1,2,2,3,4,4,5];
+
+    const uniqueNumbers1= new Set(numbers); //object
+    const uniqueNumbers2= [...new Set(numbers)] //Array
+    console.log(numbers);
+     console.log(uniqueNumbers1);
+     console.log(uniqueNumbers2);
+}
+
+
+//  Date 
+
+const testDate =()=>{
+    // const currentdate= new Date(); //تاریخ فعلی
+    // console.log(currentdate);
+
+    // const specificdate=new Date('2024-09-1');
+    // console.log(specificdate);
+
+    // const customDate= new Date(2024,8,20,14,30) //(Year,Month,Day,Hour,Minute);
+    // console.log(customDate);
+
+    // const current = new Date();
+    // console.log(current.getFullYear());
+    // document.getElementById("emptySpace").innerText=current.getFullYear(); سال
+    // document.getElementById("emptySpace").innerText=current.getMonth(); ماه
+    // document.getElementById("emptySpace").innerText=current.getDate(); //روز
+    // document.getElementById("emptySpace").innerText=current.getHours();//ساعت
+    // document.getElementById("emptySpace").innerText=current.getMinutes();
+    // document.getElementById("emptySpace").innerText=current.getSeconds();
+
+    // const timestamp= Date.now();
+    // console.log(timestamp);
+
+    // const date= new Date();
+    // document.getElementById("emptySpace").innerText=date.toDateString();
+    // console.log(date.toDateString());
+    // console.log(date.toLocaleDateString());
+    // console.log(date.toLocaleTimeString());
+    // console.log(date.toISOString());
+
+    const date1= new Date('2024-09-20');
+    const date2= new Date('2023-09-20');
+
+    // console.log(date1 < date2); //data type: boolean -- true
+     const myBoolean = date1 < date2;
+    //  console.log(myBoolean);
+     if (myBoolean){
+        console.log("I am true");
+     }else if (!myBoolean){
+        console.log("I am false");
+     }
+
+    //  (myBoolean === true)   equal   (myBoolean) یادتون بمونه حتما
+    // (myBoolean === false)    equal برابره با   (!myBoolean)
+
+
+
     
 }
 
+const testEquals =()=>{
+    const a = "20";
+    const b= 20;
+    console.log(a === b) ;
+
+    // ===       نوع داده را هم بررسی میکنم 
+    // == نوع داده را بررسی نمیکند 
+
+    // فقط و فقط ازین به بعد برای بررسی مساوی بودن ها از سه تا مساوی استفاده میکنید باید یاید باید  
+}
+
+// new RegExp() ********
+// regular expression  بیان منظم 
+// در مچ کردن پسورد امن با پسوردی که کاربر وارد میکند استفاده میشود 
+// این یکی از کاربردهاشه 
+
+const testRegexp=()=>{
+    // const regex= new RegExp('Hello','i');
+    // i===> case-insensitive 
+    // case-sensitive  حساس به حروف بزرگ و کوچک
+    // case-insensitive حساس به حروف بزرگ و کوچک نباشد
+    // console.log(regex.test('apple'));
+
+    // const testString ="Hello , world!";
+    // const match = testString.match(regex);
+    // console.log(match); // ['Hello']
+
+    // const regex2= /hello/;
+    // const text="Hello, world! hello again!";
+    // console.log(regex2.test(text))
+
+}
+
+// تابع بررسی پسپرد امن 
+const testSecurePass=()=>{
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const password= document.getElementById("passWord").value;
+    if(passwordRegex.test(password)){
+        alert("secure")
+    }else{
+        alert("unsecure")
+    }
+
+}
 
 
 
