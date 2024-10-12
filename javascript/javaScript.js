@@ -475,7 +475,7 @@ const testRegexp=()=>{
 
 }
 
-// تابع بررسی پسپرد امن 
+// تابع بررسی پسورد امن 
 const testSecurePass=()=>{
 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -485,13 +485,103 @@ const testSecurePass=()=>{
     }else{
         alert("unsecure")
     }
+}
 
+// new Function()**********
+// برای ایجاد تابع در زمان ران تایم استفاده میشه 
+// تابع داینامیک 
+// اگر بخواهید در حین اجرای یک تابع تابعی دیگر ایجاد شود از این استفاده میکنیم 
+const testNewFunction1=()=>{
+    const add=new Function('a','b','return a+b');
+    console.log(add(2,'3'))
+}
+
+const testNewFunction2=()=>{
+    const turnTotoUpperCase=new Function('str','return str.toUpperCase()');
+     const result= turnTotoUpperCase('Hello class!');
+     console.log(result);
+}
+
+const turnTotoUpperCase=(str)=>{
+    const result= str.totoUpperCase();
+    console.log(result);
+}
+
+const testNewFunction3=()=>{
+    const complicatedFunc= new Function('a','b','return alert(a+b),console.log(a+b)');
+    complicatedFunc('hi',30);
 }
 
 
+const testNewFunction4=()=>{
+    const operation='c';
+    const calculate=new Function('x','y',`return x ${operation === 'mul' ? '*' : '+'} y `);
+    console.log(calculate(5,10));
+}
+
+//${operation === 'mul' ? '*': '+' }
+// if(operation === 'mul'){ * } else {+}
+// دو خط بالا با هم برابرند 
+// اگر آپریشن مساویه مالتیپلای باشه ضرب کن در غیر اینصورت علاوه کن
+// ${var === meghdar ?  'agar hast' : 'agar nist'   }
+// :   یعنی در غیر اینصورت
 
 
+// security and performance خطا داره 
+// تا میتونید از نیو فانکشن 
+// دوری کنید چون باگ های امننیتی و محدودیت هایی داره 
+
+// *****************************javascript events************************** 
+// onchange - onclick - onmouseover - onmouseout - onkeydown - onload - 
 
 
+// onchange 
+const handleChange=()=>{
+    alert("input changed");
+    alert('changed to :' + document.getElementById("inputTXT").value);
+}
 
+// onclick 
+const handleGetData=()=>{
+    alert('I learn onclick event')
+}
+
+const handleMouseOver=()=>{
+    document.getElementById("mouseOverText").style.backgroundColor="red";
+    document.getElementById("status").innerText="MOUSE OVER"
+
+}
+
+const handleMouseOut=()=>{
+    document.getElementById("mouseOverText").style.backgroundColor="";
+      document.getElementById("status").innerText=" MOUSE OUT"
+}
+
+const getData=()=>{
+    // fetch(url).catch.
+}
+
+
+const handleKeyDown=(event)=>{
+    alert('key pressed :'+ event.key);
+    if(event.key === 'Enter'){
+        console.log("get data");
+        getData();
+        // هر تابعی 
+    }
+}
+
+// window.onload= function (){
+    // alert("page has loaded صفحه لود شد ");
+    // توی ری اکت 
+    // useEffect();
+// }
+
+// ********************************template strings ********* 
+const testTemplateString=()=>{
+    let x= 244;
+    let name = `${x} is a number`;
+    // let name =x + "is a number";
+    alert(name);
+}
 
