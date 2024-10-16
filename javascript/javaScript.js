@@ -585,3 +585,167 @@ const testTemplateString=()=>{
     alert(name);
 }
 
+// javascript string methods ******************
+
+const testStringMethods=()=>{
+
+    // const array=["1","two","8888"];
+    // console.log(array.length);
+
+    // let text1= "ABSDFGHTHJJKJYH";
+    // let length= text1.length;
+    // console.log(length);
+
+    // let text2= "HELLO WORLD";
+    // let char2= text2.charAt(1);
+    // console.log(char2);
+
+    // let text3= "HELLO WORLD";
+    // let char3= text3.charCodeAt(0);
+    // console.log(char3);
+
+    // const name2= "Hello";
+    // let letter=name2.at(2);
+    // console.log(letter);
+
+    // const name3= "Hello";
+    // let letter3=name3[0];
+    // console.log(letter3);
+
+    // let text= "Hello world";
+    // text[0]= "A"; 
+    // هیچ ارورری نمیده اما اجرا هم نمیکنه 
+
+}
+
+// سه متود داریم که برای اکسترکت کردن بخشی از یک استرینگ استفاده میشه 
+// slice(start,end)
+// substring(start,end)
+// substr(start,length)
+
+const testSlice=()=>{
+    // آخرین کاراکتر را نمیآورد و از صفر شروع به شمارش میکند 
+    // let text1="AppleBanananKiwi";
+    // let part1= text1.slice(7,13);
+    // console.log(part1);
+
+    // اگر دومین ورودی را ندیم از همونجا نصف میکند و نیمه دوم را نمایش میدهد 
+    // let text2= "Apple, Banana, Kiwi";
+    // let part2= text2.slice(5);
+    // console.log(part2);
+
+    // let text="Apple, Banana, Kiwi";
+    // let part= text.slice(-12,-6);
+    // console.log(part);
+
+}
+
+// سابسترینگ عین اسلایس هست 
+// فقط مقدار منفی نمیگیرد 
+// const testSubstring=()=>{
+//     let text1="AppleBanananKiwi";
+//     let part1= text1.substring(7,13);
+//     console.log(part1);
+//     alert(part1);
+// }
+
+// substr( ) عین اسلایس هست 
+// اما منسوخ شده 
+// const testSubstr=()=>{
+//     let srt3= "Apple, Banana, Kiwi";
+//     let part3= srt3.substr(7,6);
+//     console.log(part3);
+// }
+
+// *******************************totoUpperCase() and toLowercase()****** 
+
+// const textUpLow=()=>{
+//     let text1= "HI SMART STUDENTS";
+//     // let mytxt= text1.toUpperCase();
+//     let mytxt= text1.toLowerCase();
+//     console.log(mytxt);
+// }
+
+// concat به استرینگ استرینگی را وصل میکند *************
+// const testConcat=()=>{
+//     let text= "Hello"+"T"+"World!";
+//     let myTXT= "Hello".concat("T","world!");
+//     console.log(text);
+//     console.log(myTXT);
+// }
+
+
+// trim()*****************************************
+// فاصله اضافی را از هر دو طرف استرینگ حذف میکند
+// const testTrim=()=>{
+//     let text1= "         Hello world!     ";
+//     let text2= text1.trim();
+//     let text3=text1.trimStart();
+//     let text4= text1.trimEnd();
+//     console.log(text4);
+//     console.log(text4.length);
+
+
+//     console.log(text2);
+//     console.log(text1);
+//     console.log(text1.length);
+//     console.log(text2.length);  
+// }
+
+// padEnd() - padStart()****************
+// const textPad=()=>{
+// // let text= "57";
+// // let padded= text.padStart(4,"xy");
+// // به اول پنج صفر اضافه میکنه تا به کاراکتر چهارم برسه 
+// // انقدر باید به اولش یک اضافی کنی تا تعداد کل کاراکتر ها چهار بشه 
+// // اگر تعداد کاراکتر ها از ورودی اول بیشتر باشه اجرا نمیکنه 
+// // console.log(padded);
+
+
+// let numb=5; // 5
+// let text= numb.toString(); // "5"
+// let padded= text.padEnd(4,"8");
+// console.log(padded);
+
+// }
+
+// repeat()********************
+// const textRepeat=()=>{
+//     let text = "hello world";
+//     let result= text.repeat(7);
+//     console.log(result);
+// }
+
+
+// replace() ****************************************
+// اولین مچ رو فقط جایگزین میکنه 
+// اگر بخواهیم بقیه مچ هارو هم جایگزین بکنه از /g
+// استفاده میکنیم 
+// is case sensitive 
+// به حروف کوچک و بزرگ حساسه 
+
+// const testReplace=()=>{
+//     let text= "please visit our website !";
+//     let newText= text.replace("website","Melorinet");
+//     let newtxt1= text.replace("WEBSITE","melorinet");
+//     // برای اینکه حساس به حروف کوچک و بزرگ نباشه 
+//     let newtxt2=text.replace(/WEBSITE/i,"melorinet");
+//     // console.log(text);
+//     // console.log(newtxt2);
+
+
+//     let text2= "please visit our website ! website ";
+//     // برای اینکه به همه مچ ها اعمال بشه از 
+//     // regular expression /g 
+//     // استفاده میکنیم 
+//     let newtxt= text2.replace(/website/g,"melorinet");
+//     console.log(text2);
+//     console.log(newtxt);
+
+// }
+
+// replaceAll()*********** 
+2021 
+ const testReplaceAll=()=>{
+    
+ }
