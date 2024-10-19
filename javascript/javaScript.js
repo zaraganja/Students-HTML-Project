@@ -747,5 +747,91 @@ const testSlice=()=>{
 // replaceAll()*********** 
 2021 
  const testReplaceAll=()=>{
-    
+    let text= "فارسی زبان شیرین جهان است .این یک متن فارسی است";
+    console.log(text);
+    console.log(text.replaceAll("فارسی","پرشین"));
  }
+
+
+// تبدیل استرینگ به آرایه **************************
+const testSplit=()=>{
+    let TXT="123456 hbncs"
+    console.log(TXT.split(","));
+    console.log(TXT.split(""));
+}
+
+// متدهای جستجو برای استرینگ ها
+// JS string search methods ***********************
+
+const testSearchMethods=()=>{
+    // ایندکس حرف اولش رو میاره
+    let text= "because the SKY is high!";
+    // let index1= text.indexOf("sky");
+    // console.log(index1);
+
+    // let lastIndex= text.lastIndexOf("sky");//آخرین کلمه ای که مچ شده را میدهد
+    // console.log(lastIndex);
+
+    // console.log(text.indexOf("you"))// اگر نتواند پیدا کنم lastIndexOf- indexOf
+    //-1
+
+    // let result=text.search("sky");
+    // console.log(result);
+
+    // یک ارایه میدهد 
+    // let myMatch= text.match(/sky/gi);
+    // let myindex= myMatch[0];
+    // console.log(myMatch);
+    // console.log(myindex);
+
+    // اگر بخواهم خروجی ام boolean 
+    // let includes1=text.includes("the")//true
+    // let includes=text.includes("the",12);//false
+    // console.log(includes);
+
+
+    //boolean
+    // let x=text.startsWith("because the");//true
+    // let y= text.startsWith("the");
+    // console.log(y);
+
+    // let m=text.endsWith("the");//false
+    // let r=text.endsWith(".",11)
+    // console.log(r);
+
+
+    // ***********************************************template strings *****
+    // ``backtick 
+    // ""  ''  ``  are strings 
+
+ 
+   
+}
+
+// از داخل یک تابع میتونی تابع دیگه ای رو فراخوانی کنی اما نمیتونی تابع بسازی 
+// پس داخل یک تابع نمیتوانی تابع جدیدی بسازی اما اگر به این کار نیاز داری بهتر است تابعی که میخواهی بسازی را 
+// در بیرون از آن تابع بسازی و بعد ان را فراخوانی کنی 
+const getName=(name)=>{
+    if(name !== undefined){
+        giveFullName(name)
+    }else{
+        alert("name is undefiend")
+    }
+}
+
+const giveFullName=(Name)=>{
+    let LName="taheri";
+    let FullName= "welcome" + Name + "," + LName;
+    let fName= `<i>welcome<h1>${Name},${LName}</h1></i>`;
+    document.getElementById("emptySpace").innerHTML=fName;
+    document.getElementById("emptySpace2").innerText=fName;
+    console.log(FullName);
+    console.log(fName);
+}
+
+// ********** NaN - 
+
+
+
+
+
