@@ -829,7 +829,189 @@ const giveFullName=(Name)=>{
     console.log(fName);
 }
 
-// ********** NaN - 
+// ********** NaN - Not a Number 
+ const testNaN=()=>{
+    let x= 100 / "apple";
+    let y= 100 /"10"; //اگر استرینگم عدد باشد خروجی یک عدد خواهد بود ۱۰
+    let z= 2/0; // infinity
+    let m= -2 /0 ; // -infinity
+
+
+    console.log(x);
+    console.log(y);
+    console.log(z);
+    console.log(m);
+ }
+
+//  *********some methods ********* .toString()- typeof()- 
+
+const testToString =()=>{
+    let x= 123;
+    let y= "123";
+
+    // x1 مانی 
+    // x.toString()   عمل نشان دادن تعداد سیب ها
+    let x1= x.toString();
+   let x2= x+"";
+    console.log(typeof(x2));
+    // let type= typeof(x);
+    // console.log(x1);
+    //  console.log(x.toString());
+    // console.log(type);
+    // console.log(typeof(y));
+   
+}
+
+// toExponential() رند به بالا رو انجام میده 
+const textToExp=()=>{
+    let x= 9 ;
+    let y = x.toExponential(4);
+    console.log(y);
+}
+
+
+// toFixed() خروجی استرینگ میده
+const testToFixed=()=>{
+    let x= 9.656;
+    let y= x.toFixed(2); //مقادیر پولی
+    let z = x.toFixed(4);// بعد از ممیز باید چهار تا رقم داشته باشی
+    console.log(y);
+    console.log(z);
+}
+
+// toPrecision() خروجی استرینگ میده
+const testToP=()=>{
+    let x= 9.565;
+    let y= x.toPrecision(3);
+    console.log(y);
+    console.log(typeof(y));
+}
+
+// نوت ؟
+// اگر بخواهم نوع یک ورایبل را بفهممم چه کار کنم
+// typeof(اون ورایبله )
+
+
+// valueOf() ***
+// ورایبل یعنی ظرف 
+const testValueOf=()=>{
+    let x= "123";
+    let y=x.valueOf();
+    console.log(typeof(x.valueOf()))
+    console.log(y);
+    }
+
+
+
+    // Number()- parseFloat() توابعی هستند که ورایبلهارو به نامبر تبدیل میکنن
+    const testNumber=()=>{
+        // کار مخالف .toString( داره انجام میده )
+        // let x= "33";
+        // let t = Number(x);
+        // console.log(Number(x));
+
+        let a= true;
+        let b= false;
+        let t=Number(a);
+        console.log(t);
+        console.log(Number(b));
+    
+    }
+
+    // parseFloat() 
+    // یک استرینگ به عنوان ورودی میگیرد 
+    // در داخل این استرینگ از سمت چپ شروع به بررسی میکند
+    // اگر عدد باشد ان را برمیگرداند
+    // اگر حرف باشد NaN 
+    const testParsF=()=>{
+        let t = parseFloat("3.3b34a 10.33 30");
+        console.log(t);
+        // console.log(parseFloat(223333))
+    }
+
+    
+    // متد های آرایه ها در جاواسکریپت 
+    const testArray= ()=>{
+        const a = new Array();
+        a[0]="apple";
+        a[1]="ios";
+        a[2]="Mac";
+        a[3]="windows";
+
+
+        const a1= ["apple","ios","Mac","Windos"];
+
+        console.log(a);
+        console.log(a1);
+
+        const v= ["red","blue","green"];
+    }
+
+    // join()*****
+    const testJoinn=()=>{
+        const a1= ["apple","ios","Mac","Windos"];
+        let t= a1.join(",");
+        console.log(t);
+
+    }
+
+    // pop()*******آخرین آیتم از آرایه را برمیدارد و حذف میکند
+    // مزیت اینه که جای آیتم رو خالی قرار نمیده 
+    // اما delete جای آیتم رو خالی میذاره
+    const testPopnkjsdnjknc=()=>{
+        const a1= ["apple","ios","Mac","Windos"];
+        console.log(a1.pop());//آیتم حذف شده را میدهد
+        console.log(a1);// ارایه ی حذف شده را میدهد
+        // اگر ایتم اولی یا وسطی را بخوایم حذف کنیم ???
+
+    }
+
+    // push()*******ولیو را به آخر آرایه اضافه میکند 
+    const testPush=()=>{
+        const a1= ["apple","ios","Mac","Windos"];
+        a1.push("linux");// طول ارایه رو میده
+        console.log(a1.length);
+    }
+
+
+    // shift()*****
+    const testshift=()=>{
+        const a1= ["apple","ios","Mac","Windos"];
+        console.log(a1.shift());//اون ایتمی رو میده که حذف شده
+         console.log(a1.length);
+        // a1.shift();
+        // console.log(a1);
+        // a1.shift();
+        // console.log(a1);
+        // a1.shift();
+        // console.log(a1);
+        // a1.shift();
+        // console.log(a1);
+    }
+
+    // unshift()******آیتم را به اول آرایه اضافه میکند
+    const testUnshift=()=>{
+        const a1= ["apple","ios","Mac","Windos"];
+        console.log(a1.unshift("M2"));
+        a1[2]="";
+        console.log(a1);
+        delete(a1[1]);
+        console.log(a1);
+    }
+
+    // concat()****** 
+    
+
+
+    //copywith()
+
+
+
+
+
+
+
+
 
 
 
