@@ -930,7 +930,7 @@ const testValueOf=()=>{
     }
 
     
-    // متد های آرایه ها در جاواسکریپت 
+    // ********************متد های آرایه ها در جاواسکریپت *****************************
     const testArray= ()=>{
         const a = new Array();
         a[0]="apple";
@@ -999,11 +999,114 @@ const testValueOf=()=>{
         console.log(a1);
     }
 
-    // concat()****** 
+    // concat()****** ارایه ها را با هم ترکیب میکنه و یک ارایه تشکیل میده
+    const testConcat=()=>{
+        const arra1=["RED","GREEN"];
+        const arr2= ["gold","silver",234];
+
+        const newARR= arr2.concat(arra1);
+        const newarr2= newARR.concat("blue");
+        // console.log(newarr2);
+
+        const arr3= ["mac","win","apple"];
+        const arr4= ["mac1","win2","apple3"];
+        const finalARR= arra1.concat(arr2,arr3,arr4,arra1);
+
+        console.log(finalARR);
+
+    }
+
+
     
 
 
-    //copywith()
+    //copywithin()
+    // المنتهای آرایه را به پوزیشن دیگری کپی میکند 
+    // این متد طول ارایه را عوض نمیکند 
+    // وقتی بخواهید یک قسمت از ارایه رو به قسمت دیگری از ارایه کپی کنید 
+    const testCopywhithin =()=>{
+        const colors=["red","green","white","a1","a2"];
+        colors.copyWithin(2,0,2);
+        console.log(colors);
+    }
+    // با تعداد ارایه های مختلف کار کنید روش 
+
+    // flat()*******
+    // یک ارایه جدید ایجاد میکند 
+    const testFlat=()=>{
+        const myarr=[[1,2],[7,4],5,6];
+        const newarr= myarr.flat();
+        console.log(newarr);
+    }
+
+    // flatmap()****
+    // مثال از سرور تعداد رنگ های یک محصول رو گرفتید 
+    // میخواهید این آرایه رو در یک لیستی نمایش 
+    // میخواید اول هر ایتم کلمه ی رنگ اضافه بشه 
+    // برای این کار از همین متد استفاده میکنید 
+    const testflatmap=()=>{
+        const myarr=[[1,2],[7,4],5,6];
+        const newarr1= myarr.flat().flatMap(x=> [x*10]);
+        const newarr2= myarr.flat().flatMap(x=> [x, x+"myitem"]);
+        const newarr3= myarr.flat().flatMap(x=> [ x+"myitem"]);
+        // console.log(newarr2);
+
+        const colors= ["سبز","قرمز","سفید"];
+        const newarr= colors.flatMap(x=> "رنگ " + x);
+        console.log(newarr);
+
+
+    }
+
+
+    // slice()  splice()  ******
+    // slice() قسمتی از ارایه رو جدا میکنه
+    // splice() آیتم های جدیدی به ارایه اضافه میکنه 
+    // فرق ایندو اینه که اولی ارایه جدید تشکیل میده و ارایه اصلی رو دستکاری نمیکنه
+    // ولی دومی میاد خود ارایه رو دستکاری میکنه 
+    const testMethods=()=>{
+        const foods= ["pizza","hamburger","pilav","waffle"];
+        // foods.splice(2,0,"f1","f2");
+       const newArr = foods.slice(1);
+        console.log(newArr);
+    }
+
+    // toSpliced()**** ES2023 splice() همون
+    // فرقش با splice 
+    // اینه که یه ارایه جدید تشکیل میده و به ارایه اصلی دست نمیزنه
+
+// ************************متد های جستجو در ارایه ها ************************
+// indexOf()*****  
+const serach=()=>{
+    const names=["a1","jacket","pant","hat","jacket","glasses"];
+    let jacketPos=names.indexOf("pant",1);
+    let pos=names.lastIndexOf("jacket");//آخرین آیتمی که باهاش مچه 4
+    let pos2=names.indexOf("jacket");//1
+    console.log(pos);
+    // اگر بخواهیم هر چند تعداد باشه بهمون برگردونه ؟؟ 
+}
+
+// includes()*** boolean
+const testinclude =()=>{
+    const names=["a1","jacket","pant","hat","jacket","glasses"];
+    console.log(names.includes("a2"));
+}
+
+// find()***** 
+const Findover18=()=>
+{
+    const names=["a1","jacket","pant","hat","jacket","glasses"];
+    let first= names.find(myFunction);
+}
+const myFunction=(value,index,array)=>{
+    if(value === "jacket"){
+        console.log(index);
+    }
+}
+
+
+
+
 
 
 
