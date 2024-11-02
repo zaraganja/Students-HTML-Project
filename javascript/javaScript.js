@@ -1104,6 +1104,140 @@ const myFunction=(value,index,array)=>{
     }
 }
 
+// findIndex()****
+const testFI=()=>{
+    const nums=[3,7,15,22,30];
+    let f= nums.findIndex(MyFunction);
+    console.log(f);
+}
+const MyFunction=(value,index,array)=>{
+        return value>20
+}
+
+// findLast()******* هدفش اینه که نزدیکترین بزرگترین عدد رو به ما برمیگردونه
+// const textFL=()=>{
+//     const t= [27,28,30,40,42,25,40];
+//     let high=t.findLast(x=> x>40);//بزرگترین عدد از داخل یک ارایه رو برمیگردونه
+//     console.log(high);
+// }
+
+// findLastIndex()***** 
+const textFLI=()=>{
+    const t= [27,28,30,40,42,25,40];
+    let high=t.findLastIndex(x=> x>40);//4 index
+    console.log(high);
+}
+
+// ******** Javascript مرتب کردن ارایه ها ------ 
+// sort()*****
+// به ترتیب حروف الفبا مرتب میکنه 
+// به ترتیب عدد ها مرتب میکنه 
+// حرف و یا عدد اول رو میگیره 
+// اول حروف بزرگ رو مرتب میکنه میده بعد حروف کوچک رو مرتب میکنه میده 
+const sorT=()=>{
+    const array=["baby","ozmo","apple","Nine"];
+   let rr= array.toSorted();
+    console.log(rr);
+
+     const nums=[20,44,3,"A",18];
+     nums.sort();
+     console.log(nums);
+    // اگر بخواهیم اعداد به صورت واقعی از کوچک به بزرگ مرتب شود ????
+}
+
+
+// reverse()***** ارایه را از اخر به اول نمایش میدهد 
+const rv=()=>{
+    const array=["baby","ozmo","apple","Nine"];
+    let cc=array.toReversed();
+    console.log(cc);
+
+}
+
+// toSorted()***** = sort() با فرق اینکه این ارایه اصلی رو عوض نمیکنه
+// باید نتیجه عملیات رو بندازیم داخل یک ورایبل 
+
+// toReversed() ** == reverse() یکی هستن با این تفاوت که این به ارایه اصلی دست نمیزنه 
+
+// *************** JS متدهای تکرار ارایه ها 
+
+// forEach() ****** 
+// اگر بخواهید ارایه را تغییر دهید و داخل یک ارایه دیگر بیاندازید 
+const FE=()=>{
+    const nums= [45,4,9,16,25];
+     nums.forEach(myFUC);
+    // console.log(nums);
+}
+// let myarr=[];
+const myFUC=(value,index,array)=>{
+    console.log (value * 3);
+    // let txt="";
+    // txt += value * 2 ;// 45 and 0
+    // myarr.unshift(txt);
+    // console.log(myarr);
+}
+
+// map()*********** به ارایه اصلی دست نمیزنه
+// بدون دادن value اجرا نمیشه 
+
+const MA=()=>{
+    const nums= [45,4,9,16,25];
+    nums.map(myFUC2);
+    console.log(nums);// خود ارایه رو عوض نکرد 
+}
+ let myarr2=[];
+const myFUC2=(value,index,array)=>{
+//    let a= value *index;
+//    myarr2.unshift(a);
+//      console.log(myarr2);
+return value*2
+}
+
+
+// map and forEach بعضی وقتا نتیجه یکسان میدن 
+
+
+// flatMap()**** به راحتی میتوانی روی هر آیتم از ارایه عملیاتی انجام دهی بدون اینکه حلقه بنویسی
+const FMA=()=>{
+    const arr44=[1,2,3,4,5,6];
+    const newarr= arr44.flatMap((x)=> x*2);
+    console.log(newarr);
+}
+
+// filter() ***** 
+const fI=()=>{
+    const nums = [30,4,8,10,25];
+    const over17= nums.filter(myfUnction);
+    console.log(over17);
+}
+const myfUnction =(value,index,array)=>{
+    return value < 17
+}
+
+// reduce()***** left to right
+const RD=()=>{
+    const nums = [30,4,8,10,25];
+  let rr = nums.reduce(F,300);//300 + 77
+    console.log(rr);
+}
+const F =(total,value,index,array)=>{
+    return total + value;
+}
+
+
+// reduceRight()***** عین قبلیه ولی از راست به چپ 
+
+// every()****** is used in unit testing 
+// رو هر ولیو از آرایه یه تست انجام میده 
+
+
+
+
+
+
+
+
+
 
 
 
