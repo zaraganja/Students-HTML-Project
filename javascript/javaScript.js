@@ -1226,10 +1226,134 @@ const F =(total,value,index,array)=>{
 
 
 // reduceRight()***** عین قبلیه ولی از راست به چپ 
+// الگوریتم حبابی bubble sort 
+
+// سوال اقای طاهر مرتب کردن ارایه به صورت نزولی یا صعودی 
+const sortMyarr=()=>{
+    let array=[82,[30,50],40,66];
+    let sortedArray= array.flat().sort((a,b)=> a - b);//از گوچک به بزرگ 
+    let sortedArray2= array.flat().sort((a,b)=> b - a);//از گوچک به بزرگ 
+    console.log(sortedArray2);
+
+}
+
+// روش دوم reduce(), push(),findIndex(),splice() 
+
 
 // every()****** is used in unit testing 
+// اگر حتی یکی از ولیو ها تست رو پاس نکنه فالس میده 
 // رو هر ولیو از آرایه یه تست انجام میده 
+const unitTest=()=>{
+    const nums=[45,5,8,31];
+    let allOver19= nums.every(everyFunc);
+    console.log(allOver19);//false
+}
+const everyFunc=(value,index,array)=>{
+    // if( value >19){
+    //     console.log(value +" is bigger than 19");
+    // }
+    return value>19;
+}
 
+
+// some()**************
+// unit test بعضی ها اگر پاس کنند تست قبوله
+const kkk=()=>{
+    const nums=[45,5,8,31];
+    let someOver19= nums.some(someTest);
+    console.log(someOver19);// true
+}
+
+const someTest=(value,index,array)=>{
+    return value > 19;
+}
+
+// Array.from()***** (تسک) 
+// از یک استرینگ یک ارایه می سازد 
+const formarr=()=>{
+    let data= "ADFVG1,23456";
+    let v= Array.from(data);
+    console.log(v);
+}
+
+
+// Array.keys() ******
+// کلید های ارایه رو به ما میده 
+const testyy=()=>{
+    const color=["red","green","blue","yellow"];
+    const keys= color.keys();//[0,1,2,3]
+     console.log(keys);//[0,1,2,3] array iterator
+    let text ="";
+    for (let x of keys){
+        text += x ;
+        console.log(text);
+       console.log(Array.from(text));
+    }
+
+}
+
+// entries()*****
+// کلید و ولیو رو ارایه میکنه میده 
+ const vvventry=()=>{
+    const colors=["red","green","blue","yellow"];
+    const entryList= colors.entries();//[key,value]
+    console.log(entryList);
+    for (let x of entryList){
+        console.log(x);
+    }
+ }
+
+//  with()****  ES2023
+// یک روش راحت برای اینه که المنتهای یک ارایه رو بدون اینکه ارایه اصلی رو عوض کنی تغییر بدی 
+const testWith=()=>{
+    const colors=["red","green","blue","yellow"];
+    // یک مقدار جدید به مقدار قدیمی اضافه میکنه
+    // چیز اضافی وارد ارایه نمیکنه 
+    const newarr= colors.with(0,"pink"); 
+    console.log(newarr);
+}
+
+// spread (...) ****مهم
+// به این سه نقطه میگن اسپرد 
+const testSpread =()=>{
+    const colors=["red","green","blue","yellow"];
+    const nums=[45,5,8,31];
+    const array=["baby","ozmo","apple","Nine"];
+
+    const newCombinedARr=[...colors, ...nums, ...array];
+    console.log(newCombinedARr);
+}
+
+// **********Math.random()***** 
+
+const testRandom=()=>{
+    // قرعه کشی 
+    // نام گذاری فایل 
+console.log(Math.random()); //یه عددی بین صفر و یک 
+console.log(Math.floor(Math.random()*10)); //یه عددی بین صفر و نه 
+console.log(Math.floor(Math.random()*11)); //یه عددی بین صفر و ده 
+console.log(Math.floor(Math.random()*100)); //یه عددی بین صفر و نود و نه 
+console.log(Math.floor(Math.random()*100)+1); //یه عددی بین صفر و صد 
+
+}
+
+// نکاتی در مورد بولین هboolean s 
+const booleans =()=>{
+    let x1= 0;// -0 //false //اگر بخواهم این متغیر را داخل یک استیت بولین بندازم آیا ترو هست یا فالس
+    let x2=1;//true
+    let x3= 22;// -22 //true ,یعنی داخل این متغیر مقداری استاندارد و اوکی وجود دارد و اوکیه
+    let x4= ""; //false چون یک استرینگ خالیه
+    let x5= "frggfeftre";//true چون استرینگ پره
+    let x6; // false  متغیری که تعریف شده ولی مقدار دهی نشده تعریف نشده هست
+    // if (x6 === 0){
+    //     console.log(false);
+    // }
+    let x7= null; //false
+    let x8= 445 / "hnhjd";//NaN not a number and has false data type
+     console.log(x8); 
+     console.log(Boolean(x8));
+     
+}
 
 
 
