@@ -1355,9 +1355,85 @@ const booleans =()=>{
      
 }
 
+const testTrueFalse=(show)=>{
+    let text= (!show) ? "show the loading" : "dont show";
+    console.log(text);
+}
+
+// nullish operator ?? ******
+// nullish یعنی  null or undefiend ??
+const testNullish=()=>{
+    let name= null;
+    let text= "ali";
+    let result = name ?? text;//اگر اسم نالیش باشه یعنی یا نال یا آندیفایند باشه تکست را بنداز داخل ریزالت
+    console.log(result);
+}
 
 
+// if else ****** 
+const testifElse =(productNumber)=>{
+    if(productNumber === 0) { 
+        console.log("you cant put your product number zero! ")
+    }
+    else if (productNumber === 9){
+        console.log("its ok!")
+    }
+    else{
+        console.log("not allowed");
+    }
+}
 
+// switch case ****** 
+const testSC=(number)=>{
+    switch(number){
+        case 12:
+            console.log(number);
+            break;
+        case 13:
+            console.log("M");
+            break;
+        case 22:
+            console.log("Tue");
+            break;
+        case 53:
+            console.log("null");
+            break;
+        case 64:
+            console.log("64");
+            break;
+        case 75:
+        case 85:
+            console.log("Friday");
+            break;
+        case 69:
+            console.log("Saturday");
+            break;
+
+        default:
+            console.log("function is running");
+
+    }
+}
+
+
+// while do while **** 
+const testw=()=>{
+    let i=0;
+    while(i<6){
+        console.log("i is lower than 6");
+        i++;
+        // break **
+         if(i===2) {break;}
+    }
+}
+
+// ********* fonts ***********
+
+
+// break **** از حلقه میپره بیرون
+// const testBreak =()=>{
+//     for ()
+// }
 
 
 
