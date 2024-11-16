@@ -1427,13 +1427,86 @@ const testw=()=>{
     }
 }
 
-// ********* fonts ***********
+// ********* fonts ***********ok => textFontFamily.html
+
 
 
 // break **** از حلقه میپره بیرون
-// const testBreak =()=>{
-//     for ()
-// }
+const testBreak =()=>{
+    for (let i=0 ; i<10; i++){
+        if(i === 4) {break;}
+        console.log(i)
+    }
+}
+
+
+// destructuring به معنی قابل درک 
+// یعنی آن پک کردن یک آبجکت 
+// و یا ارایه 
+
+// چگونه از تک تک آیتم های داخل آبجکت استفاده کنم 
+const testDes=()=>{
+    const person={
+        fname:"shiva",
+        lname:"deljavan",
+        age:20
+    }
+    // دادن نام مستعار 
+    let {lname,age:birthday}=person;
+    console.log(lname);
+    console.log(birthday);
+}
+
+// برای آرایه ها 
+ const testDesArr=()=>{
+    const fruites=["banana","cherry","apple","mango"];
+    let [fruit1,fruit2,b,a]=fruites;
+    console.log(fruit1);
+    console.log(b);
+
+    let [f11,f22,...rest]=fruites;
+    console.log(rest);// به صورت آرایه میده 
+
+ }
+
+//  برای هندل کردن ارور ها در جاواسکریپت از 
+//  try catch () 
+ try {
+    // خط کدی که میخوای اجرا بشه 
+    // معمولا در ارتباط با گرفتن داده ها از سرور استفاده میشه 
+ } catch (error) {
+    
+ }
+ finally {
+    // این خط کد هارو حنما اجرا میکنه 
+ }
+
+//  ایجاد ارور به دلخواه 
+const throwError=()=>{
+    throw "unsecure password";
+}
+
+// ------***** کلاس های جاواسکریپت ---- 
+// برای object ها استفاده میشه 
+const classTest=()=>{
+// برای تولید آبجکت هست این ساختار 
+    class Car {
+        constructor(name,year){
+            this.name= name;
+            this.year=year
+        }
+    }
+const myCar=new Car("C1",2015);
+console.log(myCar);
+const myCar2=new Car("C2",2011);
+console.log(myCar2);
+
+}
+
+
+
+// (JSmodules =import ) برای فراخوانی ماژول ها 
+
 
 
 
