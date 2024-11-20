@@ -1496,24 +1496,122 @@ const classTest=()=>{
             this.year=year
         }
     }
-const myCar=new Car("C1",2015);
-console.log(myCar);
-const myCar2=new Car("C2",2011);
-console.log(myCar2);
-
+     const myCar=new Car("C1",2015);
+     console.log(myCar);
+     const myCar2=new Car("C2",2011);
+     console.log(myCar2);
 }
+
+
 
 
 
 // (JSmodules =import ) برای فراخوانی ماژول ها 
 
+// JSON  => Javascript Object Notation
+// نوع داده ای که قراره از سرور بگیریم و در پروژه استفاده کنیم 
+// داده json رو
+// از API میگیریم   
+
+//  show ? "":""
+// javascript Bitwise ********* 
+
+// 0 => false
+// 1 => true 
+// AND 0 OR FALSE 
+//  0 && 0 => 0
+//( 0 && 1) => 0 
+// 1 && 0 => 0 
+// 1 && 1 => 1 
+
+// let show= false
+// let i= true 
+// or 
+// 0 || 0 => 0 
+// 0 || 1 => 1
+// 1 || 0 => 1
+// 1 || 1 => 1 
+
+// ^ bitwise
+// 0 ^0 => 0
+// 1 ^0 => 1 
+// 0 ^1 =>1 
+// 1 ^1 => 0 
+
+
+// کد داخلش را بعد از چند میلی ثانیه که تعیین کرده اید اجرا میکند 
+const testTimeOut=()=>{
+    // یک بار اجرا میشه 
+// کد داخلش را بعد از چند میلی ثانیه که تعیین کرده اید اجرا میکند 
+    setTimeout(() => {
+    alert("hi after 5 s")
+    }, 5000);    
+}
+// به میلی ثانیه 
+// 5000s  => 5s
+
+
+// setInterval(() => {
+    // کد داخلش را هر دو یا چند  ثانیه یه بار اجرا میکنه 
+// }, 2000);
+// const testInterval=()=>{
+//     setInterval(() => {
+//         alert("hi interval ")
+//     }, 2000);
+// }
+
+// const tqq=()=>{
+//     let i=0;
+//     setInterval(() => {
+//         i++;
+//         alert(i);
+//     }, 2000);
+// }
+
+
+// JS promise 
+// کدی که اجراش زمان بره و برای یک خروجی منتظره از پرامیس استفاده 
+
+// این دو تابع در ری اکت و در همه پروژه های جاواسریپتی برای 
+// گرفتن داده به صورت امن استفاده می شود 
+// حفظ کنید و نگه دارید 
+// طلا 
+// url = api 
+const getDataWithPromise=(url)=>{
+    return new Promise((resolve,reject)=>{
+        fetch(url).then(response =>{
+            if(!response){
+                reject("HTTP ERROR");
+            }else {
+                return response.json()
+            }
+        }).then(data=> resolve(data))
+        .catch(error=> reject("network error"+error))
+    })
+}
+
+const getmyData=()=>{
+    getDataWithPromise("https://jsonplaceholder.typicode.com/todos/1").then(data=>{
+        console.log(data);
+    }).catch(error=>{
+        console.log(error);
+    })
+}
+
+
+// ******** async await ***** 
+// باعث میشه یک پرامیش برگرده 
+// مثلا در گرفتن داده از سرور اجازه نمیده به داده ها قبل از دریافت پاسخ از سمت سرور دسترسی داشته باشم 
+const getDataAsycrounous=async()=>{
+await fetch("https://jsonplaceholder.typicode.com/todos/1").then(response=>{
+    console.log(response)
+}).catch(error=>{console.log(error)})
+}
 
 
 
 
-
-
-
+// مثال رنج برای رنگ و درصد ***************
 
 
 
