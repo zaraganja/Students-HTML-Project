@@ -1600,18 +1600,83 @@ const getmyData=()=>{
 
 
 // ******** async await ***** 
-// باعث میشه یک پرامیش برگرده 
+// باعث میشه یک پرامیس برگرده 
 // مثلا در گرفتن داده از سرور اجازه نمیده به داده ها قبل از دریافت پاسخ از سمت سرور دسترسی داشته باشم 
 const getDataAsycrounous=async()=>{
 await fetch("https://jsonplaceholder.typicode.com/todos/1").then(response=>{
     console.log(response)
-}).catch(error=>{console.log(error)})
+}).catch(error=>{console.log(error);alert(error)})
 }
 
+// JAVASCRİPT HTML DOM => Document Object Model 
+// با استفاده از دام جاواسکریپت میتونیم به همه المنتهای داکیومنت اچ تی ام ال دسترسی پیدا کنیم 
+// وقتی یک وب پیجی لود میشه براوزر یک دام ازون پیج ایجاد میکنه 
+// اچ تی ام ال دام یک استانداردی هست برای اینکه چگونه المنتهای اچ تی ام ال رو بگیریم عوض کنیم حذفش کنیم اضافه کنیم 
+// document.getElementById("").innerHTML=کد اچ تی ام ال
+// document.getElementById("").innerText=""
+// document.getElementsByTagName(اسم تگ).style.backgroundColor="red" 
+// document.getElementsByClassName(نام کلاس ).innerText= "" 
+// document.removeChild(element) 
+// document.appendChild(elemnt)
+// document.replaceChild(new,old) 
+// document.getElementById("id").onclick=getmyData();
+// document.anchors => <a /> لیست همه تگ های 
+// const x= document.querySelectorAll("p.intro") لیست تمام تگهای پی که کلاسشون اسمش اینترو هست رو برمیگردونه 
+// const changeimg=()=>{
+//     document.getElementById("myimg").src="./src/images/pro2.jpg";
+// }
+//  document.getElementById("id").onmousedown=getmyData(); 
+
+// onload => وقتی کاربر وارد سایت میشه 
+// onunload => وقتی ترک میکنه وبسایت رو 
+// const upperCase=()=>{
+//     document.getElementById("fname").style.color="red"
+    
+// }
+
+// addEventListener() , removeEventListener() 
+// document.getElementById("id").addEventListener("click",Function1)
+// document.getElementById("id").addEventListener(A,Function1)
+// A=> "scroll", "click","draq","focus","keypress","mousedown","mouseenter","mouseup","mouseover"
+// ,"animatedend",... (HTML DOM events)
+
+// let w=window.innerWidth; ویندو میاد سایز براوزرت رو در نظر میگیره 
+// let h=window.innerHeight;
+
+// let w=screen.innerWidth; اسکرین میاد سایز اسکرین ویزیتو رو در نظر میگیره 
+// let h=screen.innerHeight;
+
+// ----------------------------- 
+// Cookies
+// داده هایی هستن که داخل یک فایل کوچک تکست در روی کامپیوتر شما ذخیره شده اند 
+// document.cookie="username=Samin;expires= Thu , 18 Feb 00:00UTC" 
+// let x= document.cookie; 
+
+// React Next 
+
+
+// ------------- 
+// API (Application Programming Inretface) 
+// به براوزر اجازه میده یک درخواست http به سرور بفرسته 
+
+
+// ------------- 
+// DOM NODES 
+//  const mypnodes= document.querySelectorAll("p") همه نودههای پی رو میگیرم 
+// mypnodes[1] دومین پی 
+// for (let i=0; i< mypnodes.length ; i++){
+//     mypnodes[i].style.color="red";
+// }
+// کد بالا همه نود های پی را گرفته و داخل حلقه می اندازد و دونه دونه رنگ متنشون رو قرمز میکنه 
+// نود لیست ها ممکنه شبیه آرایه ها رفتار کنن اما ارایه نیست 
+// یعنی متدهای pop push join map نمیتونی روشون اعمال کنی 
 
 
 
-// مثال رنج برای رنگ و درصد ***************
+
+
+
+
 
 
 

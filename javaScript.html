@@ -15,14 +15,18 @@
         }
     </style>
 </head>
-<body>
-     <button onclick="getmyData()" >
+<!-- <body
+ onload="checkCookies()" onunload="alertBye()" 
+ > -->
+
+ <body>
+     <button  onclick="changeimg()"  >
         getmyData blah.....
     </button> 
     <!-- <h1 id="emptySpace" ></h1> -->
     <p id="emptySpace"></p>
      <p id="emptySpace2"></p>
-
+    <!-- <img id="myimg" src="./src/images/pro1.jpg" /> -->
     <!-- <form >
         <input list="colors">
         <datalist id="colors">
@@ -47,6 +51,9 @@
 
     <label for="keyInput">press a key</label>
     <input type="text" id="keyinput" onkeydown="handleKeyDown(event)"> -->
+
+    <input type="text" id="fname" onchange="upperCase()" onfocus="changeBorder()">
+    
 
 </body>
 </html>
